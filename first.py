@@ -4,7 +4,7 @@ from PyQt5.QtGui import QPainter, QColor
 from random import randint as gen
 
 
-class Example(QMainWindow):
+class Ex(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -13,7 +13,7 @@ class Example(QMainWindow):
         self.setGeometry(300, 300, 200, 200)
         self.setWindowTitle('Рисование')
         self.pushButton = QPushButton(self)
-        self.pushButton.move(self.wigth() // 2, self.height() // 2)
+        self.pushButton.move(500 // 2, 500 // 2)
         self.pushButton.clicked.connect(self.draw_bol)
         self.flag = False
         self.show()
@@ -39,5 +39,5 @@ class Example(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = Ex()
     sys.exit(app.exec_())
